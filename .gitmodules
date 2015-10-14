@@ -4,4 +4,4 @@
 	branch = version2
 [submodule "ops/cookbooks"]
 	path = ops/cookbooks
-	url = https://github.com/ljay79/opsworks-cookbooks
+	url = https://github.com/ljay79/opsworks-cookbooks.git

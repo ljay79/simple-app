@@ -12,7 +12,7 @@
       "recipe[mod_php5_apache2]",
       "recipe[deploy::default]",
       "recipe[deploy::php]",
-      "recipe[phpapp::appsetup]",
+      "recipe[simple_app::appsetup]",
       "recipe[opsworks_ganglia::configure-client]",
       "recipe[agent_version]",
       "recipe[php::configure]"

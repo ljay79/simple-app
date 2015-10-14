@@ -11,7 +11,7 @@
       "recipe[opsworks_ganglia::client]",	  
       "recipe[mysql::server]",
       "recipe[deploy::mysql]",
-      "recipe[phpapp::dbsetup]",
+      "recipe[simple_app::dbsetup]",
       "recipe[opsworks_ganglia::configure-client]",
       "recipe[agent_version]"
     ]
