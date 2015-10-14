@@ -1,0 +1,7 @@
+[submodule "dev/simple-php"]
+	path = dev/simple-php
+	url = https://github.com/awslabs/opsworks-demo-php-simple-app
+	branch = version2
+[submodule "ops/cookbooks"]
+	path = ops/cookbooks
+	url = https://github.com/ljay79/opsworks-cookbooks
