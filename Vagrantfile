@@ -1,10 +1,6 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
-# This Vagrantfile configuration emulates the AWS OpsWorks example project found
-# in their "Getting Started" guide:
-# http://docs.aws.amazon.com/opsworks/latest/userguide/gettingstarted-db.html
-
 Vagrant.configure("2") do |config|
 
   config.vm.box = "centos7mini-opsworks"
