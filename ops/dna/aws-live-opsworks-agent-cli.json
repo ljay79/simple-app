@@ -1,0 +1,223 @@
+{
+  "ssh_users": {
+    "2001": {
+      "name": "jlroot",
+      "public_key": "ssh-rsa ************************************",
+      "sudoer": true
+    }
+  },
+  "opsworks": {
+    "agent_version": "3427-20150911163841",
+    "activity": "configure",
+    "valid_client_activities": [
+      "reboot",
+      "stop",
+      "deploy",
+      "grant_remote_access",
+      "revoke_remote_access",
+      "update_agent",
+      "setup",
+      "configure",
+      "update_dependencies",
+      "install_dependencies",
+      "update_custom_cookbooks",
+      "execute_recipes"
+    ],
+    "sent_at": 1445029342,
+    "deployment": null,
+    "layers": {
+      "php-app": {
+        "name": "PHP App Server",
+        "id": "ea856538-c4da-4387-aefd-a9bf721808ec",
+        "elb-load-balancers": [
+
+        ],
+        "instances": {
+          "makemake": {
+            "public_dns_name": "ec2-52-28-230-126.eu-central-1.compute.amazonaws.com",
+            "private_dns_name": "ip-172-31-4-129.eu-central-1.compute.internal",
+            "backends": 2,
+            "ip": "52.28.230.126",
+            "private_ip": "172.31.4.129",
+            "instance_type": "t2.micro",
+            "status": "online",
+            "id": "cce59802-b4c4-46ab-9050-593ffc386160",
+            "aws_instance_id": "i-1ec227a3",
+            "elastic_ip": null,
+            "created_at": "2015-10-16T20:46:03+00:00",
+            "booted_at": "2015-10-16T20:47:49+00:00",
+            "region": "eu-central-1",
+            "availability_zone": "eu-central-1a",
+            "infrastructure_class": "ec2"
+          }
+        }
+      },
+      "db-master": {
+        "name": "MySQL",
+        "id": "cab1228e-f4ad-4f08-8005-1b0f23ad4369",
+        "elb-load-balancers": [
+
+        ],
+        "instances": {
+          "cordelia": {
+            "public_dns_name": "ec2-52-28-121-232.eu-central-1.compute.amazonaws.com",
+            "private_dns_name": "ip-172-31-14-226.eu-central-1.compute.internal",
+            "backends": 2,
+            "ip": "52.28.121.232",
+            "private_ip": "172.31.14.226",
+            "instance_type": "t2.micro",
+            "status": "online",
+            "id": "85301e16-6118-4884-abb0-0498ca9e59e1",
+            "aws_instance_id": "i-73c227ce",
+            "elastic_ip": null,
+            "created_at": "2015-10-16T20:54:20+00:00",
+            "booted_at": "2015-10-16T20:57:19+00:00",
+            "region": "eu-central-1",
+            "availability_zone": "eu-central-1a",
+            "infrastructure_class": "ec2"
+          }
+        }
+      }
+    },
+    "applications": [
+      {
+        "name": "MySimplePhp",
+        "slug_name": "simple_php",
+        "application_type": "php"
+      }
+    ],
+    "stack": {
+      "name": "simple-php-vagrant",
+      "id": "49418d41-c482-4f1a-812c-4201dbf6ab04",
+      "vpc_id": "vpc-ee02b387",
+      "elb-load-balancers": [
+
+      ],
+      "rds_instances": [
+
+      ]
+    },
+    "instance": {
+      "id": "cce59802-b4c4-46ab-9050-593ffc386160",
+      "hostname": "makemake",
+      "instance_type": "t2.micro",
+      "public_dns_name": "ec2-52-28-230-126.eu-central-1.compute.amazonaws.com",
+      "private_dns_name": "ip-172-31-4-129.eu-central-1.compute.internal",
+      "ip": "52.28.230.126",
+      "private_ip": "172.31.4.129",
+      "architecture": "x86_64",
+      "layers": [
+        "php-app"
+      ],
+      "backends": 2,
+      "aws_instance_id": "i-1ec227a3",
+      "region": "eu-central-1",
+      "availability_zone": "eu-central-1a",
+      "subnet_id": "subnet-6a2cab03",
+      "infrastructure_class": "ec2"
+    },
+    "ruby_version": "2.0.0",
+    "ruby_stack": "ruby",
+    "rails_stack": {
+      "name": null
+    },
+    "cloud_watch_logs_configurations": {
+      "ea856538-c4da-4387-aefd-a9bf721808ec-php-app": [
+
+      ]
+    }
+  },
+  "deploy": {
+    "simple_php": {
+      "application": "simple_php",
+      "application_type": "php",
+      "environment": {
+      },
+      "environment_variables": {
+      },
+      "auto_bundle_on_deploy": true,
+      "deploy_to": "/srv/www/simple_php",
+      "deploying_user": null,
+      "document_root": "web",
+      "domains": [
+        "simple_php"
+      ],
+      "migrate": false,
+      "mounted_at": null,
+      "rails_env": null,
+      "restart_command": "echo 'restarting app'",
+      "sleep_before_restart": 0,
+      "ssl_support": false,
+      "ssl_certificate": null,
+      "ssl_certificate_key": null,
+      "ssl_certificate_ca": null,
+      "scm": {
+        "scm_type": "git",
+        "repository": "https://github.com/awslabs/opsworks-demo-php-simple-app",
+        "revision": "version2",
+        "ssh_key": null,
+        "user": null,
+        "password": null
+      },
+      "symlink_before_migrate": {
+        "config/opsworks.php": "opsworks.php"
+      },
+      "symlinks": {
+      },
+      "database": {
+        "database": "simple-php",
+        "username": "root",
+        "password": "myNewcustomPassword123",
+        "reconnect": true
+      },
+      "memcached": {
+        "host": null,
+        "port": 11211
+      }
+    }
+  },
+  "opsworks_custom_cookbooks": {
+    "enabled": true,
+    "scm": {
+      "type": "git",
+      "repository": "https://github.com/ljay79/opsworks-cookbooks.git",
+      "user": null,
+      "password": null,
+      "revision": null,
+      "ssh_key": null
+    },
+    "manage_berkshelf": true,
+    "berkshelf_version": "3.2.0",
+    "recipes": [
+      "opsworks_ganglia::configure-client",
+      "ssh_users",
+      "mysql::client",
+      "agent_version",
+      "opsworks_stack_state_sync",
+      "php::configure",
+      "test_suite",
+      "opsworks_cleanup"
+    ]
+  },
+  "chef_environment": "_default",
+  "recipes": [
+    "opsworks_custom_cookbooks::load",
+    "opsworks_custom_cookbooks::execute"
+  ],
+  "opsworks_commons": {
+    "assets_url": "https://opsworks-instance-assets-eu-central-1.s3.amazonaws.com"
+  },
+  "mysql": {
+    "server_root_password": "myNewcustomPassword123",
+    "tunable": {
+      "innodb_buffer_pool_size": "256M"
+    }
+  },
+  "opsworks_bundler": {
+    "version": "1.5.3",
+    "manage_package": null
+  },
+  "opsworks_rubygems": {
+    "version": "2.2.2"
+  }
+}
